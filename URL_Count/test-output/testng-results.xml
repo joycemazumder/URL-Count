@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="317985" started-at="2019-06-04T06:58:01Z" finished-at="2019-06-04T07:03:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="317985" started-at="2019-06-04T06:58:01Z" finished-at="2019-06-04T07:03:19Z">
+      <class name="com.URL.captureTheCount">
+        <test-method status="PASS" signature="initializetheclasses()[pri:0, instance:com.URL.captureTheCount@3bfdc050]" name="initializetheclasses" is-config="true" duration-ms="8330" started-at="2019-06-04T06:58:02Z" finished-at="2019-06-04T06:58:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializetheclasses -->
+        <test-method status="PASS" signature="verifytheurl_and_capture(com.URL.CSSSelector)[pri:1, instance:com.URL.captureTheCount@3bfdc050]" name="verifytheurl_and_capture" duration-ms="49814" started-at="2019-06-04T06:58:10Z" data-provider="urldata" finished-at="2019-06-04T06:59:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.URL.CSSSelector@616fe72b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytheurl_and_capture -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.URL.captureTheCount@3bfdc050]" name="teardown" is-config="true" duration-ms="2367" started-at="2019-06-04T06:59:00Z" finished-at="2019-06-04T06:59:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="initializetheclasses()[pri:0, instance:com.URL.captureTheCount@3bfdc050]" name="initializetheclasses" is-config="true" duration-ms="6029" started-at="2019-06-04T06:59:02Z" finished-at="2019-06-04T06:59:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializetheclasses -->
+        <test-method status="PASS" signature="verifytheurl_and_capture(com.URL.CSSSelector)[pri:1, instance:com.URL.captureTheCount@3bfdc050]" name="verifytheurl_and_capture" duration-ms="104605" started-at="2019-06-04T06:59:08Z" data-provider="urldata" finished-at="2019-06-04T07:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.URL.CSSSelector@77a98a6a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytheurl_and_capture -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.URL.captureTheCount@3bfdc050]" name="teardown" is-config="true" duration-ms="2343" started-at="2019-06-04T07:00:53Z" finished-at="2019-06-04T07:00:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="initializetheclasses()[pri:0, instance:com.URL.captureTheCount@3bfdc050]" name="initializetheclasses" is-config="true" duration-ms="5928" started-at="2019-06-04T07:00:55Z" finished-at="2019-06-04T07:01:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializetheclasses -->
+        <test-method status="PASS" signature="verifytheurl_and_capture(com.URL.CSSSelector)[pri:1, instance:com.URL.captureTheCount@3bfdc050]" name="verifytheurl_and_capture" duration-ms="137189" started-at="2019-06-04T07:01:01Z" data-provider="urldata" finished-at="2019-06-04T07:03:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.URL.CSSSelector@50fe837a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytheurl_and_capture -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.URL.captureTheCount@3bfdc050]" name="teardown" is-config="true" duration-ms="328" started-at="2019-06-04T07:03:18Z" finished-at="2019-06-04T07:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.URL.captureTheCount -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
