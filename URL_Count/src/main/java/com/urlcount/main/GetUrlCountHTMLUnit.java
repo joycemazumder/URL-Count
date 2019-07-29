@@ -24,6 +24,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.urlcount.object.CSSSelector;
 import com.urlcount.utils.ExcelReader;
+import com.urlcount.utils.GetUrlCountUtil;
 
 public class GetUrlCountHTMLUnit {
 
@@ -84,7 +85,7 @@ public class GetUrlCountHTMLUnit {
 		 Logger.getLogger("org.apache").setLevel(Level.OFF);
 	
 		urlList.forEach((CSSSelector css) -> {
-			cssList.add(new CSSSelector(css.getUrl(), css.getCssSelector(), css.getCssSelectorNot(), fname));
+			cssList.add(new CSSSelector(css.getUrl(), css.getHomeSelectorStr(),css.getCssSelector(), css.getCssSelectorNot(), fname));
 		});
 
 		/*
@@ -124,7 +125,7 @@ public class GetUrlCountHTMLUnit {
 
 					logger.info("url :[" + url + "]>>> CSS Selector:" + cssSel.getCssSelector());
 					
-					domNode=getNode(cssSel.getUrl().trim(),cssSel.getCssSelector());
+					domNode=GetUrlCountUtil.getNode(cssSel.getUrl().trim(),cssSel.getCssSelector(),webClient);
 					if (domNode!=null) {
 
 						tagValue=getNodeValue(domNode);
@@ -151,7 +152,7 @@ public class GetUrlCountHTMLUnit {
 					if ((cssSel.getUrl().trim().length() > 4) && (cssSel.getCssSelectorNot() != "0")) {
 						//By by = By.cssSelector(cssSel.getCssSelectorNot());
 						//result2 = driver.findElement(by);
-						domNode=getNode(cssSel.getUrl().trim(),cssSel.getCssSelectorNot());
+						domNode=GetUrlCountUtil.getNode(cssSel.getUrl().trim(),cssSel.getCssSelectorNot(),webClient);
 						if (domNode!=null)
 		                {
 							resultFound = "false";
@@ -202,35 +203,7 @@ public class GetUrlCountHTMLUnit {
 
 		logger.info("=============URL Count Process  with NO Browser ends=============");
 	}
-	public static DomNode getNode(String url ,String cssSelector)
-	{
-		DomNode domNode=null;
-		int nodeExists=0;
-		 
-		try {
-			List<HtmlAnchor> searchResults = new ArrayList<>();
-			HtmlPage page = webClient
-					.getPage(url);
-			
-			Thread.sleep(5000);
-			 domNode=page.querySelector(cssSelector);
-			System.out.println("url:["+page.getBaseURI()+"] + Selector :["+cssSelector+  "]Result  domNode==null:"+(domNode==null));
-			
-			
-			
 
-		} catch (FailingHttpStatusCodeException | IOException | InterruptedException   e) {
-			
-			e.printStackTrace();
-			 
-		}
-		catch (Exception   e) {
-			
-			e.printStackTrace();
-			 
-		}
-		return domNode;
-	}
 	 
 	public static int getNodeValue(DomNode domNode)
 	{

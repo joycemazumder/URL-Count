@@ -58,7 +58,7 @@ public class GetUrlCountNoBrowser {
 		int totalLength = urlmap.size();
 
 		urlList.forEach((CSSSelector css) -> {
-			cssList.add(new CSSSelector(css.getUrl(), css.getCssSelector(), css.getCssSelectorNot(), fname));
+		//	cssList.add(new CSSSelector(css.getUrl(), css.getCssSelector(), css.getCssSelectorNot(), fname));
 		});
 
 		/*

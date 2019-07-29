@@ -117,7 +117,7 @@ public class GetUrlCountHTMLUnitCsv {
 		 Logger.getLogger("org.apache").setLevel(Level.OFF);
 	
 		urlList.forEach((CSSSelector css) -> {
-			cssList.add(new CSSSelector(css.getUrl(), css.getCssSelector(), css.getCssSelectorNot(), fname));
+	//		cssList.add(new CSSSelector(css.getUrl(), css.getCssSelector(), css.getCssSelectorNot(), fname));
 		});
 
 		/*

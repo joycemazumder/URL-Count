@@ -41,14 +41,27 @@ public class SSLEmail {
         	//final String toEmail = "<kgaurav@pbgholdings.com >"; // can be any email id 
         	//final String toEmail = "kgaurav@pbgholdings.com";
         	String attachmentName = file.getAbsolutePath();
-            
+            //smtp-mail.outlook.com
             System.out.println("SSLEmail Start");
+            
     		Properties props = new Properties();
+    		/*
+    		
     		props.put("mail.smtp.auth", true);
+    	    props.put("mail.smtp.starttls.enable", true);
+    	    props.put("mail.smtp.host", "smtp-mail.outlook.com");
+    	    props.put("mail.smtp.host", "smtp.nitds.com");
+    	    props.put("mail.smtp.host", "smtp.live.com");
+    	    props.put("mail.smtp.port", "587");
+    	    
+    	    */
+    		props.put("mail.smtp.auth", false);
     	    props.put("mail.smtp.starttls.enable", true);
     	    props.put("mail.smtp.host", "smtp.nitds.com");
     	    props.put("mail.smtp.port", "587");
-    	    prop.put("mail.smtp.ssl.trust", "smtp.nitds.com");
+    	    //SSL Factory Class
+    		//props.put("mail.smtp.auth", "true"); //Enabling SMTP Authentication
+    	    //prop.put("mail.smtp.ssl.trust", "smtp-mail.outlook.com");
     	    
     	    //SSL Factory Class
     		//props.put("mail.smtp.auth", "true"); //Enabling SMTP Authentication

@@ -24,8 +24,9 @@ public class CSVReader {
 			for (CSVRecord csvRecord : csvParser) {
 				// Accessing Values by Column Index
 				String url = csvRecord.get("URL");
-				String tagFound = csvRecord.get(1);
-				String tagNotFound = csvRecord.get(2);
+				String home=csvRecord.get(0);
+				String tagFound = csvRecord.get(2);
+				String tagNotFound = csvRecord.get(3);
 
 				System.out.println("Record No - " + csvRecord.getRecordNumber());
 				System.out.println("---------------");
@@ -33,7 +34,7 @@ public class CSVReader {
 				System.out.println("tags : " + tagFound);
 				System.out.println("tags2 : " + tagNotFound);
 
-				CSSSelector cSSSelector = new CSSSelector(url, tagFound, tagNotFound, "");
+				CSSSelector cSSSelector = new CSSSelector(url,home, tagFound, tagNotFound, "");
 				urlList.add(cSSSelector);
 
 				System.out.println("---------------\n\n");

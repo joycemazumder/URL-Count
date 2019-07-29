@@ -3,6 +3,8 @@ package com.urlcount.object;
 public class CSSSelector {
 
 	private String url;
+	
+	private String homeSelectorStr="";
 
 	private String cssSelector;
 
@@ -10,12 +12,24 @@ public class CSSSelector {
 
 	private String outputfile;
 
-	public CSSSelector(String url, String cssSelector, String cssSelectorNot, String outputfile) {
+	
+
+	public CSSSelector(String url, String homeSelectorStr, String cssSelector, String cssSelectorNot,
+			String outputfile) {
 		super();
 		this.url = url;
+		this.homeSelectorStr = homeSelectorStr;
 		this.cssSelector = cssSelector;
 		this.cssSelectorNot = cssSelectorNot;
 		this.outputfile = outputfile;
+	}
+
+	public String getHomeSelectorStr() {
+		return homeSelectorStr;
+	}
+
+	public void setHomeSelectorStr(String homeSelectorStr) {
+		this.homeSelectorStr = homeSelectorStr;
 	}
 
 	public String getCssSelectorNot() {
@@ -26,9 +40,6 @@ public class CSSSelector {
 		this.cssSelectorNot = cssSelectorNot;
 	}
 
-	public CSSSelector() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getCssSelector() {
 		return cssSelector;
