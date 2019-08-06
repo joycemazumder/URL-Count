@@ -140,11 +140,15 @@ import com.urlcount.utils.GetUrlCountUtil;
 					 
 					 String selectorName=GetUrlCountUtil.getSelectorName(cssSel.getCssSelectorNot());
 						
-					// selector="div#resultsFoundMessage";
-				//	 	 logger.info(pageSource);
+					 		// selector="div#resultsFoundMessage";
+					 		// logger.info(pageSource);
 					 logger.info("##############url driver using:" + driver.getCurrentUrl()+"::"+pageSource.contains(selectorName));
-					// List<WebElement> elements = driver.findElements(By.cssSelector(selector));
-					 if(!selectorName.equals(""))
+					 		// List<WebElement> elements = driver.findElements(By.cssSelector(selector));
+					
+					 resultFound=iffoundResultZero(cssSel, driver);
+						 
+					 
+					 if((resultFound.equalsIgnoreCase("Error"))&&(!selectorName.equals("")))
 					 {
 						 if(pageSource.contains(selectorName))
 						 {
@@ -155,6 +159,9 @@ import com.urlcount.utils.GetUrlCountUtil;
 							 resultFound = "Error";
 						 }
 					 }
+					 
+					 /*
+					 
 					 else
 					 {
 						 resultFound=iffoundResultZero(cssSel, driver);
@@ -163,7 +170,12 @@ import com.urlcount.utils.GetUrlCountUtil;
 							resultFound = "Error";
 						}
 					 }
-			}
+					 
+					 */
+					 
+					 
+					 
+				}
 				catch(Exception e)
 				{
 					e.printStackTrace();
@@ -224,7 +236,7 @@ import com.urlcount.utils.GetUrlCountUtil;
 	}
 	public static String iffoundResultZero( CSSSelector cssSel, ChromeDriver driver) {
 		WebElement result2 = null;
-		String rFound = "";
+		String rFound = "Error";
 		
 		if ((cssSel.getUrl().trim().length() > 4) && (cssSel.getCssSelectorNot() != "0")) {
 
@@ -233,10 +245,7 @@ import com.urlcount.utils.GetUrlCountUtil;
 				if (result2 != null) {
 					rFound = "false";
 
-				} else {
-					rFound = "Error";
-
-				}
+				}  
 				System.out.println("resultFound:" + rFound);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

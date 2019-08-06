@@ -57,16 +57,16 @@ public class GetUrlCount {
 		ChromeDriver chromedriver=null;
 
 			try {
-			System.out.println("Select following options....");
-			System.out.println("1. Input value 1 for executing with browser");
-			System.out.println("2. Input value 2 for executing without browser");
-			System.out.println("Input value :");
-			Scanner in = new Scanner(System.in);
-			String s = in.nextLine();
-			//String s ="1";
+			//System.out.println("Select following options....");
+			System.out.println("Executing with browser");
+			//System.out.println("2. Input value 2 for executing without browser");
+			//System.out.println("Input value :");
+			//Scanner in = new Scanner(System.in);
+			//String s = in.nextLine();
+			String s ="1";
 			
 			if (s.trim().equalsIgnoreCase("1")) {
-				System.out.println("With browser");
+				 
 				
 				System.setProperty("webdriver.chrome.driver", folderpath+File.separator+"input"+File.separator+"chromedriver.exe");
 				

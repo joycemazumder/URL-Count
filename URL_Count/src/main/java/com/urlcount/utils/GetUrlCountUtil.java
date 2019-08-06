@@ -257,20 +257,33 @@ public class GetUrlCountUtil {
 		 
 		if(selector.contains("#"))
 		{
-		 
-			return StringUtils.split(selector, "#")[1];
+			String s="";
+			s=StringUtils.replace(StringUtils.split(selector, "#")[1],".", " ");
+			return s;
+			
+			
 		}
 		else if(selector.contains("."))
 		{
-		 
-			return StringUtils.split(selector, ".")[1];
+			StringBuilder r=new StringBuilder("");
+		 String s[]=StringUtils.split(selector, ".");
+			 for(int i=1;i<s.length;i++)
+			 {
+				 r.append(s[i]+" ");
+			 }
+			return r.toString().trim();
 		}
 		else
 			return "";
 	}
 	public static void main(String[] args) {
 		try {
-			String link = "https://www.macys.com/shop/featured/aZZZnne-kZZZlein-jewelry";
+			String selector="a.b.c.d";
+			
+			
+			System.out.println(getSelectorName(selector));
+			
+			//String link = "https://www.macys.com/shop/featured/aZZZnne-kZZZlein-jewelry";
 			// System.out.println(getFilePath(args[0]));
 			// IsHomePage(link);
 			// getConsoleInput();
