@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
-
+ 
 import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -136,13 +136,13 @@ import com.urlcount.utils.GetUrlCountUtil;
 			}
 			if (foundResult == 0) {
 				 
-				try {
+				try { 
 					 
 					 String selectorName=GetUrlCountUtil.getSelectorName(cssSel.getCssSelectorNot());
 						
 					 		// selector="div#resultsFoundMessage";
 					 		// logger.info(pageSource);
-					 logger.info("##############url driver using:" + driver.getCurrentUrl()+"::"+pageSource.contains(selectorName));
+					 logger.info("##############url driver using:" + driver.getCurrentUrl()+": Selector :"+selectorName+"::"+pageSource.contains(selectorName));
 					 		// List<WebElement> elements = driver.findElements(By.cssSelector(selector));
 					
 					 resultFound=iffoundResultZero(cssSel, driver);
@@ -264,7 +264,9 @@ import com.urlcount.utils.GetUrlCountUtil;
 				
 			// selector="div#resultsFoundMessage";
 		//	 	 logger.info(pageSource);
-			 logger.info("Selector in page source::"+page.contains(selectorName));
+		 	  	
+			 logger.info("Selector in page source::"+": Selector :"+selectorName+":"+page.contains(selectorName));
+			 
 			// List<WebElement> elements = driver.findElements(By.cssSelector(selector));
 			 if(!selectorName.equals(""))
 			 {
