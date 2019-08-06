@@ -259,7 +259,7 @@ public class GetUrlCountUtil {
 		{
 			String s="";
 			s=StringUtils.replace(StringUtils.split(selector, "#")[1],".", " ");
-			return s;
+			return "=\""+s+"\"";
 			
 			
 		}
@@ -271,7 +271,8 @@ public class GetUrlCountUtil {
 			 {
 				 r.append(s[i]+" ");
 			 }
-			return r.toString().trim();
+			 
+			return "=\""+r.toString().trim()+"\"";
 		}
 		else
 			return "";
